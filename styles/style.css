@@ -1,1 +1,215 @@
-/* место для вашего кода */
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Raleway-Regular', sans-serif;
+  }
+  
+  /* Контейнер всего сайта */
+  .container {
+    max-width: 1100px; /* Ширина всего сайта */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 24px; /* Отступы слева и справа */
+    box-sizing: border-box; /* Учет padding в ширине */
+  }
+  
+  /* Хедер */
+  .header {
+    background-color: #ffffff; /* Фон хедера */
+    padding: 92px 0 96px; /* Отступы сверху и снизу */
+  }
+  
+  /* Внутренний контейнер хедера */
+  .header-inner {
+    display: flex; /* Включаем flexbox */
+    align-items: center; /* Выравниваем элементы по центру вертикально */
+    justify-content: space-between; /* Распределяем элементы равномерно */
+    max-width: 1052px; /* Максимальная ширина */
+    height: 105px; /* Фиксированная высота */
+    margin: 0 auto; /* Центрируем контейнер */
+    flex-wrap: nowrap; /* Запрещаем перенос элементов */
+  }
+  
+  /* Навигация */
+  .header-nav {
+    flex-basis: 392px; /* Ширина меню */
+    margin-left: 26px; /* Отступ слева */
+    display: flex;
+    align-items: center; /* Выравниваем содержимое по центру */
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 8px; /* Пространство между пунктами */
+  }
+  
+  .nav-item {
+    font-size: 18px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+  
+  .nav-item:nth-child(2),
+  .nav-item:nth-child(4) {
+    font-size: 17px; /* Размер маркера "точка" */
+    color: #000000; /* Цвет маркера "точка" */
+  }
+  
+  .nav-item:nth-child(3),
+  .nav-item:nth-child(5) {
+    text-decoration: underline; /* Подчеркиваем ссылки */
+  }
+  
+  /* Логотип */
+  .header-logo {
+    flex-basis: 148px; /* Ширина логотипа */
+    margin-left: 36px; /* Отступ после меню */
+    display: flex;
+    align-items: center; /* Выравниваем содержимое по центру */
+  }
+  
+  .header-logo img {
+    width: 100%; /* Логотип занимает всю доступную ширину */
+    height: auto; /* Сохраняем пропорции */
+  }
+  
+  /* Контакты */
+  .header-contact {
+    flex-basis: 240px; /* Ширина блока контактов */
+    margin-left: 184px; /* Отступ после логотипа */
+    display: flex;
+    flex-direction: column; /* Размещаем строки вертикально */
+    align-items: flex-start; /* Выравниваем текст по левому краю */
+  }
+  
+  .header-contact p {
+    font-size: 18px; /* Размер шрифта */
+    color: #000000; /* Цвет текст */
+    margin: 0;
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+  
+  /* Блок секции */
+  .hero-section {
+    position: relative; /* Для абсолютного позиционирования элементов внутри */
+    width: 100%; /* Занимает всю доступную ширину */
+    overflow: hidden; /* Убираем лишние отступы */
+  }
+  
+  /* Фоновая картинка + затемнение */
+  .hero-container {
+    position: relative; /* Создаем контейнер для абсолютного позиционирования */
+    width: 1100px; /* Фиксированная ширина */
+    height: 757px; /* Фиксированная высота */
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+    overflow: hidden; /* Убираем лишние отступы */
+  }
+  
+  .hero-background {
+    width: 100%; /* Ширина картинки равна ширине родительского блока */
+    height: 100%; /* Высота картинки равна высоте родительского блока */
+    object-fit: cover; /* Изображение масштабируется без искажений */
+    display: block; /* Убираем лишние пробелы вокруг картинки */
+  }
+  
+  /* Затемнение поверх картинки */
+  .hero-container::before {
+    content: ''; /* Создаем пустой элемент */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 1; /* Затемнение находится под текстом */
+  }
+  
+  /* Общий класс для текста */
+  .hero-text {
+    position: absolute; /* Абсолютное позиционирование */
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 100px; /* Размер шрифта */
+    color: #FFFFFF; /* Белый цвет */
+    letter-spacing: 5px; /* Межбуквенный интервал */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    z-index: 2; /* Текст находится над затемнением */
+  }
+  
+  /* Первый текст "о н о" */
+  .hero-text-one {
+    top: 165px; /* Отступ сверху */
+    left: 50px; /* Отступ слева */
+  }
+  
+  /* Второй текст "т е б е" */
+  .hero-text-two {
+    top: 300px; /* Отступ сверху */
+    left: 336px; /* Отступ слева */
+  }
+  
+  /* Третий текст "н а д о" */
+  .hero-text-three {
+    top: 420px; /* Отступ сверху */
+    left: 633px; /* Отступ слева */
+  }
+  
+  /* Подпись в нижнем левом углу */
+  .hero-subtitle {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 62px; /* Отступ снизу */
+    left: 78px; /* Отступ слева */
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal; /* Обычный шрифт */
+    font-size: 22px; /* Размер шрифта */
+    color: #FFFFFF; /* Белый цвет */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    z-index: 2; /* Текст находится над затемнением */
+    word-spacing: 15px;
+    letter-spacing: 1px;
+  }
+  
+  /* Кнопка "СДЕЛАТЬ СТАВКУ" */
+  .hero-button {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 51px; /* Отступ снизу */
+    right: 50px; /* Отступ справа */
+    width: 256px; /* Ширина кнопки */
+    height: 51px; /* Высота кнопки */
+    border: 1px solid #FFFFFF; /* Белая обводка */
+    background-color: transparent; /* Прозрачный фон */
+    display: flex; /* Используем flexbox для центрирования текста */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500; /* Полужирный шрифт (medium) */
+    font-size: 22px; /* Размер шрифта */
+    color: #FFFFFF; /* Белый цвет */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    z-index: 2; /* Кнопка находится над затемнением */
+  }
+  
+  /* Текст внутри кнопки */
+  .hero-button .hero-button-text {
+    text-transform: uppercase; /* Делаем текст заглавными буквами */
+  }
+  
+  /* Фиксация размеров и позиций */
+  .hero-container {
+    position: relative; /* Родительский контейнер для абсолютного позиционирования */
+    width: 1100px; /* Фиксированная ширина */
+    height: 757px; /* Фиксированная высота */
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+  }
+  
+  .hero-text,
+  .hero-subtitle,
+  .hero-button {
+    position: absolute; /* Все элементы находятся в абсолютной позиции */
+    z-index: 2; /* Элементы находятся над затемнением */
+  }
