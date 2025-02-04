@@ -170,7 +170,7 @@
     color: #FFFFFF; /* Белый цвет */
     white-space: nowrap; /* Запрещаем перенос текста */
     z-index: 2; /* Текст находится над затемнением */
-    word-spacing: 15px;
+    word-spacing: 12px;
     letter-spacing: 1px;
   }
   
@@ -212,4 +212,78 @@
   .hero-button {
     position: absolute; /* Все элементы находятся в абсолютной позиции */
     z-index: 2; /* Элементы находятся над затемнением */
+  }
+
+ /* Общий контейнер страницы */
+.container {
+    max-width: 1100px; /* Ширина родительского блока */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 24px; /* Отступы слева и справа */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+  }
+  
+  /* Секция "Об аукционе" */
+  .about-section {
+    background-color: #FFFFFF; /* Фон белый */
+    margin-top: 2067px; /* Отступ от начала сайта */
+  }
+  
+  /* Внутренний контейнер секции */
+  .about-container {
+    position: relative; /* Для абсолютного позиционирования элементов */
+    max-width: 1052px; /* Ширина внутреннего блока */
+    height: 595px; /* Высота блока */
+    margin: 0 auto; /* Центрируем блок */
+    background-color: #FFFFFF; /* Фон белый */
+  }
+  
+  /* Круг с логотипом */
+  .about-circle {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 35px; /* Отступ сверху */
+    left: 47px; /* Отступ слева */
+    width: 240px; /* Диаметр круга */
+    height: 240px; /* Диаметр круга */
+    background-color: #000000; /* Черный фон */
+    border-radius: 50%; /* Делаем круг */
+    display: flex; /* Используем flexbox для центрирования логотипа */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+  }
+  
+  .about-logo img {
+    max-width: 100%; /* Логотип занимает всю доступную ширину */
+    max-height: 100%; /* Логотип занимает всю доступную высоту */
+  }
+  
+  /* Блок с текстом */
+  .about-content {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 0; /* Прижимаем к нижней границе */
+    right: 0; /* Прижимаем к правой границе */
+    width: 693px; /* Ширина текстового блока */
+  }
+  
+  /* Заголовок "Об аукционе" */
+  .about-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
+    margin: 0 0 100px; /* Отступ снизу после заголовка */
+  }
+  
+  /* Первый текстовый блок */
+  .about-text-first {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
+    margin-right: 100px;
+    margin-bottom: 24px; /* Отступ между текстовыми блоками */
+  }
+  
+  /* Второй текстовый блок */
+  .about-text-second {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
   }
