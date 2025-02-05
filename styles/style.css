@@ -125,7 +125,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачное черное затемнение */
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачное черное затемнение */
     z-index: 1; /* Затемнение находится под текстом */
   }
   
@@ -214,6 +214,98 @@
     z-index: 2; /* Элементы находятся над затемнением */
   }
 
+
+  .page {
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+ }
+
+ .container-1 {
+    width: 1052px;
+    height: auto; /* Изменено с фиксированной высоты на автоматическую */
+    margin: 0 auto;
+    position: relative;
+    padding-top: 87px; /* Добавлен отступ сверху для размещения заголовка */
+    margin-top: 179px; /* Добавляем отступ сверху */
+ }
+
+ h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+ }
+
+ .item-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+ }
+
+ .item {
+    width: 334px;
+    height: 563px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+ }
+
+ .overlay h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 51px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align:left;
+    font-family: 'Raleway';
+
+ }
+
+ .overlay p {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 48px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align:left;
+    margin-top: auto;
+    font-family: 'Raleway'
+ }
+
+ .view-more {
+    margin-top: 30px;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: 40px;
+    font-family: 'Raleway'
+ } 
+
  /* Общий контейнер страницы */
 .container {
     max-width: 1100px; /* Ширина родительского блока */
@@ -225,7 +317,7 @@
   /* Секция "Об аукционе" */
   .about-section {
     background-color: #FFFFFF; /* Фон белый */
-    margin-top: 2067px; /* Отступ от начала сайта */
+    margin-top: 146px; /* Отступ от начала сайта */
   }
   
   /* Внутренний контейнер секции */
@@ -269,7 +361,10 @@
     font-family: 'Raleway', sans-serif;
     font-size: 40px; /* Размер шрифта */
     color: #000000; /* Цвет текста */
-    margin: 0 0 100px; /* Отступ снизу после заголовка */
+    margin: 0 0 100px;
+    position: absolute;
+    top: calc(50% - 11px);
+    transform: translateY(-50%);
   }
   
   /* Первый текстовый блок */
@@ -277,8 +372,10 @@
     font-family: 'Raleway', sans-serif;
     font-size: 20px; /* Размер шрифта */
     color: #000000; /* Цвет текста */
-    margin-right: 100px;
+    margin-right: 20px;
     margin-bottom: 24px; /* Отступ между текстовыми блоками */
+    margin-left: 40px;
+    margin-top: 100px;
   }
   
   /* Второй текстовый блок */
@@ -286,4 +383,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 20px; /* Размер шрифта */
     color: #000000; /* Цвет текста */
+    margin-right: 20px;
+    margin-bottom: 24px; /* Отступ между текстовыми блоками */
+    margin-left: 40px;
   }
