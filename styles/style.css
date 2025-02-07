@@ -6,24 +6,21 @@
   }
   
   body {
-    font-family: 'Raleway-Regular', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
   
-  /* Контейнер всего сайта */
   .container {
     max-width: 1100px; /* Ширина всего сайта */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 0 24px; /* Отступы слева и справа */
-    box-sizing: border-box; /* Учет padding в ширине */
+    box-sizing: border-box; 
   }
   
-  /* Хедер */
   .header {
     background-color: #ffffff; /* Фон хедера */
     padding: 92px 0 96px; /* Отступы сверху и снизу */
   }
   
-  /* Внутренний контейнер хедера */
   .header-inner {
     display: flex; /* Включаем flexbox */
     align-items: center; /* Выравниваем элементы по центру вертикально */
@@ -31,15 +28,14 @@
     max-width: 1052px; /* Максимальная ширина */
     height: 105px; /* Фиксированная высота */
     margin: 0 auto; /* Центрируем контейнер */
-    flex-wrap: nowrap; /* Запрещаем перенос элементов */
+    flex-wrap: nowrap; 
   }
   
-  /* Навигация */
   .header-nav {
     flex-basis: 392px; /* Ширина меню */
     margin-left: 26px; /* Отступ слева */
     display: flex;
-    align-items: center; /* Выравниваем содержимое по центру */
+    align-items: center; /* Выравниваем по центру */
   }
   
   .nav-list {
@@ -65,7 +61,6 @@
     text-decoration: underline; /* Подчеркиваем ссылки */
   }
   
-  /* Логотип */
   .header-logo {
     flex-basis: 148px; /* Ширина логотипа */
     margin-left: 6px; /* Отступ после меню */
@@ -78,12 +73,11 @@
     height: auto; /* Сохраняем пропорции */
   }
   
-  /* Контакты */
   .header-contact {
     flex-basis: 240px; /* Ширина блока контактов */
     margin-left: 184px; /* Отступ после логотипа */
     display: flex;
-    font-family: 'Raleway-Regular', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     flex-direction: column; /* Размещаем строки вертикально */
     align-items: flex-start; /* Выравниваем текст по левому краю */
@@ -100,15 +94,12 @@
     text-decoration: underline;
   }
 
-
-  /* Блок секции */
   .hero-section {
-    position: relative; /* Для абсолютного позиционирования элементов внутри */
+    position: relative; /* Для позиционирования */
     width: 100%; /* Занимает всю доступную ширину */
     overflow: hidden; /* Убираем лишние отступы */
   }
   
-  /* Фоновая картинка + затемнение */
   .hero-container {
     position: relative; /* Создаем контейнер для абсолютного позиционирования */
     width: 1100px; /* Фиксированная ширина */
@@ -124,7 +115,6 @@
     display: block; /* Убираем лишние пробелы вокруг картинки */
   }
   
-  /* Затемнение поверх картинки */
   .hero-container::before {
     content: ''; /* Создаем пустой элемент */
     position: absolute; /* Абсолютное позиционирование */
@@ -136,7 +126,6 @@
     z-index: 1; /* Затемнение находится под текстом */
   }
   
-  /* Общий класс для текста */
   .hero-text {
     position: absolute; /* Абсолютное позиционирование */
     font-family: 'Raleway', sans-serif;
@@ -148,46 +137,41 @@
     z-index: 2; /* Текст находится над затемнением */
   }
   
-  /* Первый текст "о н о" */
   .hero-text-one {
-    top: 165px; /* Отступ сверху */
-    left: 50px; /* Отступ слева */
+    top: 165px; 
+    left: 50px; 
   }
   
-  /* Второй текст "т е б е" */
   .hero-text-two {
-    top: 300px; /* Отступ сверху */
-    left: 336px; /* Отступ слева */
+    top: 300px; 
+    left: 336px; 
   }
   
-  /* Третий текст "н а д о" */
   .hero-text-three {
-    top: 420px; /* Отступ сверху */
-    left: 633px; /* Отступ слева */
+    top: 420px; 
+    left: 633px; 
   }
   
-  /* Подпись в нижнем левом углу */
   .hero-subtitle {
     position: absolute; /* Абсолютное позиционирование */
-    bottom: 62px; /* Отступ снизу */
-    left: 78px; /* Отступ слева */
+    bottom: 62px; 
+    left: 78px; 
     font-family: 'Raleway', sans-serif;
     font-weight: normal; /* Обычный шрифт */
-    font-size: 22px; /* Размер шрифта */
-    color: #FFFFFF; /* Белый цвет */
+    font-size: 22px; 
+    color: #FFFFFF; 
     white-space: nowrap; /* Запрещаем перенос текста */
     z-index: 2; /* Текст находится над затемнением */
     word-spacing: 12px;
     letter-spacing: 1px;
   }
   
-  /* Кнопка "СДЕЛАТЬ СТАВКУ" */
   .hero-button {
     position: absolute; /* Абсолютное позиционирование */
-    bottom: 51px; /* Отступ снизу */
-    right: 50px; /* Отступ справа */
-    width: 256px; /* Ширина кнопки */
-    height: 51px; /* Высота кнопки */
+    bottom: 51px; 
+    right: 50px; 
+    width: 256px; 
+    height: 51px; 
     border: 1px solid #FFFFFF; /* Белая обводка */
     background-color: transparent; /* Прозрачный фон */
     display: flex; /* Используем flexbox для центрирования текста */
@@ -195,22 +179,20 @@
     justify-content: center; /* Центрируем по горизонтали */
     font-family: 'Raleway', sans-serif;
     font-weight: 500; /* Полужирный шрифт (medium) */
-    font-size: 22px; /* Размер шрифта */
-    color: #FFFFFF; /* Белый цвет */
+    font-size: 22px; 
+    color: #FFFFFF; 
     cursor: pointer; /* Изменяем курсор при наведении */
     z-index: 2; /* Кнопка находится над затемнением */
   }
   
-  /* Текст внутри кнопки */
   .hero-button .hero-button-text {
     text-transform: uppercase; /* Делаем текст заглавными буквами */
   }
   
-  /* Фиксация размеров и позиций */
   .hero-container {
     position: relative; /* Родительский контейнер для абсолютного позиционирования */
-    width: 1100px; /* Фиксированная ширина */
-    height: 757px; /* Фиксированная высота */
+    width: 1100px; /*  ширина */
+    height: 757px; /*  высота */
     margin: 0 auto; /* Центрируем блок по горизонтали */
   }
   
@@ -313,7 +295,6 @@
     font-family: 'Raleway'
  } 
 
- /* Общий контейнер страницы */
 .container {
     max-width: 1100px; /* Ширина родительского блока */
     margin: 0 auto; /* Центрируем контейнер */
@@ -321,26 +302,23 @@
     box-sizing: border-box; /* Учитываем padding в ширине */
   }
   
-  /* Секция "Об аукционе" */
   .about-section {
-    background-color: #FFFFFF; /* Фон белый */
+    background-color: #FFFFFF; 
     margin-top: 146px; /* Отступ от начала сайта */
   }
   
-  /* Внутренний контейнер секции */
   .about-container {
     position: relative; /* Для абсолютного позиционирования элементов */
     max-width: 1052px; /* Ширина внутреннего блока */
-    height: 595px; /* Высота блока */
+    height: 595px; 
     margin: 0 auto; /* Центрируем блок */
-    background-color: #FFFFFF; /* Фон белый */
+    background-color: #FFFFFF; 
   }
   
-  /* Круг с логотипом */
   .about-circle {
     position: absolute; /* Абсолютное позиционирование */
-    top: 35px; /* Отступ сверху */
-    left: 47px; /* Отступ слева */
+    top: 35px; 
+    left: 47px; 
     width: 240px; /* Диаметр круга */
     height: 240px; /* Диаметр круга */
     background-color: #000000; /* Черный фон */
@@ -355,7 +333,6 @@
     max-height: 100%; /* Логотип занимает всю доступную высоту */
   }
   
-/* Блок с текстом */
 .about-content {
   position: absolute; /* Абсолютное позиционирование */
   bottom: 0; /* Прижимаем к нижней границе */
@@ -365,34 +342,109 @@
   box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
-/* Заголовок "Об аукционе" */
 .about-title {
   font-family: 'Raleway', sans-serif;
-  font-size: 40px; /* Размер шрифта */
-  color: #000000; /* Цвет текста */
+  font-size: 40px; 
+  color: #000000; 
   margin: 0; /* Убираем стандартные отступы */
   position: absolute; /* Абсолютное позиционирование */
   top: -60px; /* Располагаем в левом верхнем углу */
   left: 0; /* Располагаем в левом верхнем углу */
 }
 
-/* Первый текстовый блок */
 .about-text-first {
   font-family: 'Raleway', sans-serif;
-  font-size: 20px; /* Размер шрифта */
-  color: #000000; /* Цвет текста */
+  font-size: 20px; 
+  color: #000000; 
   margin-left: 0; /* Убираем отступ слева */
   margin-top: 100px; /* Отступ от заголовка */
   margin-bottom: 20px; /* Отступ между текстовыми блоками */
   margin-right: 0; /* Убираем отступ справа */
 }
 
-/* Второй текстовый блок */
 .about-text-second {
   font-family: 'Raleway', sans-serif;
-  font-size: 20px; /* Размер шрифта */
-  color: #000000; /* Цвет текста */
+  font-size: 20px; 
+  color: #000000; 
   margin-left: 0; /* Убираем отступ слева */
   margin-bottom: 0; /* Убираем отступ снизу */
   margin-right: 0; /* Убираем отступ справа */
+}
+
+.footer-section {
+  margin-top: 180px; /* Отступ от блока about-section */
+  margin-bottom: 88px;
+  padding: 0 26px; /* Отступы слева и справа */
+  background-color: #FFFFFF; 
+}
+
+.footer-container {
+  display: flex; /* Используем flexbox для распределения элементов */
+  align-items: center; /* Выравниваем элементы по центру вертикально */
+  max-width: 1000px; 
+  height: 98px; 
+  margin: 0 auto; /* Центрируем контейнер */
+}
+
+.footer-contact {
+  flex-basis: 240px; /* Ширина блока контактов */
+  height: 98px; 
+  display: flex;
+  flex-direction: column; /* Размещаем строки вертикально */
+  justify-content: center; /* Центрируем содержимое по вертикали */
+}
+
+.footer-contact p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px; 
+  color: #000000; 
+  margin: 0; /* Убираем стандартные отступы */
+  white-space: nowrap; /* Запрещаем перенос текста */
+  position: relative; /* Для создания псевдоэлемента */
+}
+
+.footer-menu {
+  flex-basis: 149px; /* Ширина блока меню */
+  height: 64px; 
+  text-align: center;
+  margin-left: 186px; /* Отступ после блока контактов */
+  display: flex; /* Используем flexbox */
+  flex-direction: column; /* Размещаем пункты вертикально */
+  align-items: flex-start; /* Выравниваем пункты по левому краю */
+  justify-content: flex-start; /* Прижимаем пункты к верхней границе */
+}
+
+.menu-list {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем стандартные отступы */
+  margin: 0; /* Убираем стандартные отступы */
+}
+
+.menu-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #000000; 
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+.footer-social {
+  flex-basis: 240px; /* Ширина блока соцсетей */
+  height: 48px; 
+  margin-left: 186px; /* Отступ после блока меню */
+  display: flex; /* Используем flexbox для размещения логотипов */
+  align-items: center; /* Выравниваем содержимое по центру вертикально */
+}
+
+.social-logo {
+  width: 48px; 
+  height: 48px; 
+  margin-right: 48px; /* Отступ между логотипами */
+}
+
+.social-logo:last-child {
+  margin-right: 0; /*  отступ у последнего логотипа */
+}
+
+.contact-underlined {
+  text-decoration: underline; /*  подчеркивание */
 }
