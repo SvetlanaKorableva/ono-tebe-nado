@@ -68,7 +68,7 @@
   /* Логотип */
   .header-logo {
     flex-basis: 148px; /* Ширина логотипа */
-    margin-left: 36px; /* Отступ после меню */
+    margin-left: 6px; /* Отступ после меню */
     display: flex;
     align-items: center; /* Выравниваем содержимое по центру */
   }
@@ -83,6 +83,8 @@
     flex-basis: 240px; /* Ширина блока контактов */
     margin-left: 184px; /* Отступ после логотипа */
     display: flex;
+    font-family: 'Raleway-Regular', sans-serif;
+    font-size: 18px;
     flex-direction: column; /* Размещаем строки вертикально */
     align-items: flex-start; /* Выравниваем текст по левому краю */
   }
@@ -94,6 +96,11 @@
     white-space: nowrap; /* Запрещаем перенос текста */
   }
   
+  .header-contact p-11 {
+    text-decoration: underline;
+  }
+
+
   /* Блок секции */
   .hero-section {
     position: relative; /* Для абсолютного позиционирования элементов внутри */
@@ -348,42 +355,44 @@
     max-height: 100%; /* Логотип занимает всю доступную высоту */
   }
   
-  /* Блок с текстом */
-  .about-content {
-    position: absolute; /* Абсолютное позиционирование */
-    bottom: 0; /* Прижимаем к нижней границе */
-    right: 0; /* Прижимаем к правой границе */
-    width: 693px; /* Ширина текстового блока */
-  }
-  
-  /* Заголовок "Об аукционе" */
-  .about-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 40px; /* Размер шрифта */
-    color: #000000; /* Цвет текста */
-    margin: 0 0 100px;
-    position: absolute;
-    top: calc(50% - 11px);
-    transform: translateY(-50%);
-  }
-  
-  /* Первый текстовый блок */
-  .about-text-first {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px; /* Размер шрифта */
-    color: #000000; /* Цвет текста */
-    margin-right: 20px;
-    margin-bottom: 24px; /* Отступ между текстовыми блоками */
-    margin-left: 40px;
-    margin-top: 100px;
-  }
-  
-  /* Второй текстовый блок */
-  .about-text-second {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px; /* Размер шрифта */
-    color: #000000; /* Цвет текста */
-    margin-right: 20px;
-    margin-bottom: 24px; /* Отступ между текстовыми блоками */
-    margin-left: 40px;
-  }
+/* Блок с текстом */
+.about-content {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 0; /* Прижимаем к нижней границе */
+  right: 0; /* Прижимаем к правой границе */
+  width: 693px; /* Ширина текстового блока */
+  padding: 0; /* Убираем внутренние отступы */
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Заголовок "Об аукционе" */
+.about-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px; /* Размер шрифта */
+  color: #000000; /* Цвет текста */
+  margin: 0; /* Убираем стандартные отступы */
+  position: absolute; /* Абсолютное позиционирование */
+  top: -60px; /* Располагаем в левом верхнем углу */
+  left: 0; /* Располагаем в левом верхнем углу */
+}
+
+/* Первый текстовый блок */
+.about-text-first {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; /* Размер шрифта */
+  color: #000000; /* Цвет текста */
+  margin-left: 0; /* Убираем отступ слева */
+  margin-top: 100px; /* Отступ от заголовка */
+  margin-bottom: 20px; /* Отступ между текстовыми блоками */
+  margin-right: 0; /* Убираем отступ справа */
+}
+
+/* Второй текстовый блок */
+.about-text-second {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; /* Размер шрифта */
+  color: #000000; /* Цвет текста */
+  margin-left: 0; /* Убираем отступ слева */
+  margin-bottom: 0; /* Убираем отступ снизу */
+  margin-right: 0; /* Убираем отступ справа */
+}
