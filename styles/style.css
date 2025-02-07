@@ -1,1 +1,450 @@
-/* место для вашего кода */
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .container {
+    max-width: 1100px; /* Ширина всего сайта */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 24px; /* Отступы слева и справа */
+    box-sizing: border-box; 
+  }
+  
+  .header {
+    background-color: #ffffff; /* Фон хедера */
+    padding: 92px 0 96px; /* Отступы сверху и снизу */
+  }
+  
+  .header-inner {
+    display: flex; /* Включаем flexbox */
+    align-items: center; /* Выравниваем элементы по центру вертикально */
+    justify-content: space-between; /* Распределяем элементы равномерно */
+    max-width: 1052px; /* Максимальная ширина */
+    height: 105px; /* Фиксированная высота */
+    margin: 0 auto; /* Центрируем контейнер */
+    flex-wrap: nowrap; 
+  }
+  
+  .header-nav {
+    flex-basis: 392px; /* Ширина меню */
+    margin-left: 26px; /* Отступ слева */
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 8px; /* Пространство между пунктами */
+  }
+  
+  .nav-item {
+    font-size: 18px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+  
+  .nav-item:nth-child(2),
+  .nav-item:nth-child(4) {
+    font-size: 17px; /* Размер маркера "точка" */
+    color: #000000; /* Цвет маркера "точка" */
+  }
+  
+  .nav-item:nth-child(3),
+  .nav-item:nth-child(5) {
+    text-decoration: underline; /* Подчеркиваем ссылки */
+  }
+  
+  .header-logo {
+    flex-basis: 148px; /* Ширина логотипа */
+    margin-left: 6px; /* Отступ после меню */
+    display: flex;
+    align-items: center; /* Выравниваем содержимое по центру */
+  }
+  
+  .header-logo img {
+    width: 100%; /* Логотип занимает всю доступную ширину */
+    height: auto; /* Сохраняем пропорции */
+  }
+  
+  .header-contact {
+    flex-basis: 240px; /* Ширина блока контактов */
+    margin-left: 184px; /* Отступ после логотипа */
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    flex-direction: column; /* Размещаем строки вертикально */
+    align-items: flex-start; /* Выравниваем текст по левому краю */
+  }
+  
+  .header-contact p {
+    font-size: 18px; /* Размер шрифта */
+    color: #000000; /* Цвет текст */
+    margin: 0;
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+  
+  .header-contact p-11 {
+    text-decoration: underline;
+  }
+
+  .hero-section {
+    position: relative; /* Для позиционирования */
+    width: 100%; /* Занимает всю доступную ширину */
+    overflow: hidden; /* Убираем лишние отступы */
+  }
+  
+  .hero-container {
+    position: relative; /* Создаем контейнер для абсолютного позиционирования */
+    width: 1100px; /* Фиксированная ширина */
+    height: 757px; /* Фиксированная высота */
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+    overflow: hidden; /* Убираем лишние отступы */
+  }
+  
+  .hero-background {
+    width: 100%; /* Ширина картинки равна ширине родительского блока */
+    height: 100%; /* Высота картинки равна высоте родительского блока */
+    object-fit: cover; /* Изображение масштабируется без искажений */
+    display: block; /* Убираем лишние пробелы вокруг картинки */
+  }
+  
+  .hero-container::before {
+    content: ''; /* Создаем пустой элемент */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачное черное затемнение */
+    z-index: 1; /* Затемнение находится под текстом */
+  }
+  
+  .hero-text {
+    position: absolute; /* Абсолютное позиционирование */
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 100px; /* Размер шрифта */
+    color: #FFFFFF; /* Белый цвет */
+    letter-spacing: 5px; /* Межбуквенный интервал */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    z-index: 2; /* Текст находится над затемнением */
+  }
+  
+  .hero-text-one {
+    top: 165px; 
+    left: 50px; 
+  }
+  
+  .hero-text-two {
+    top: 300px; 
+    left: 336px; 
+  }
+  
+  .hero-text-three {
+    top: 420px; 
+    left: 633px; 
+  }
+  
+  .hero-subtitle {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 62px; 
+    left: 78px; 
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal; /* Обычный шрифт */
+    font-size: 22px; 
+    color: #FFFFFF; 
+    white-space: nowrap; /* Запрещаем перенос текста */
+    z-index: 2; /* Текст находится над затемнением */
+    word-spacing: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .hero-button {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 51px; 
+    right: 50px; 
+    width: 256px; 
+    height: 51px; 
+    border: 1px solid #FFFFFF; /* Белая обводка */
+    background-color: transparent; /* Прозрачный фон */
+    display: flex; /* Используем flexbox для центрирования текста */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500; /* Полужирный шрифт (medium) */
+    font-size: 22px; 
+    color: #FFFFFF; 
+    cursor: pointer; /* Изменяем курсор при наведении */
+    z-index: 2; /* Кнопка находится над затемнением */
+  }
+  
+  .hero-button .hero-button-text {
+    text-transform: uppercase; /* Делаем текст заглавными буквами */
+  }
+  
+  .hero-container {
+    position: relative; /* Родительский контейнер для абсолютного позиционирования */
+    width: 1100px; /*  ширина */
+    height: 757px; /*  высота */
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+  }
+  
+  .hero-text,
+  .hero-subtitle,
+  .hero-button {
+    position: absolute; /* Все элементы находятся в абсолютной позиции */
+    z-index: 2; /* Элементы находятся над затемнением */
+  }
+
+
+  .page {
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+ }
+
+ .container-1 {
+    width: 1052px;
+    height: auto; /* Изменено с фиксированной высоты на автоматическую */
+    margin: 0 auto;
+    position: relative;
+    padding-top: 87px; /* Добавлен отступ сверху для размещения заголовка */
+    margin-top: 179px; /* Добавляем отступ сверху */
+ }
+
+ h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+ }
+
+ .item-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+ }
+
+ .item {
+    width: 334px;
+    height: 563px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+ }
+
+ .overlay h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 51px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align:left;
+    font-family: 'Raleway';
+
+ }
+
+ .overlay p {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 48px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align:left;
+    margin-top: auto;
+    font-family: 'Raleway'
+ }
+
+ .view-more {
+    margin-top: 30px;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: 40px;
+    font-family: 'Raleway'
+ } 
+
+.container {
+    max-width: 1100px; /* Ширина родительского блока */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 24px; /* Отступы слева и справа */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+  }
+  
+  .about-section {
+    background-color: #FFFFFF; 
+    margin-top: 146px; /* Отступ от начала сайта */
+  }
+  
+  .about-container {
+    position: relative; /* Для абсолютного позиционирования элементов */
+    max-width: 1052px; /* Ширина внутреннего блока */
+    height: 595px; 
+    margin: 0 auto; /* Центрируем блок */
+    background-color: #FFFFFF; 
+  }
+  
+  .about-circle {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 35px; 
+    left: 47px; 
+    width: 240px; /* Диаметр круга */
+    height: 240px; /* Диаметр круга */
+    background-color: #000000; /* Черный фон */
+    border-radius: 50%; /* Делаем круг */
+    display: flex; /* Используем flexbox для центрирования логотипа */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+  }
+  
+  .about-logo img {
+    max-width: 100%; /* Логотип занимает всю доступную ширину */
+    max-height: 100%; /* Логотип занимает всю доступную высоту */
+  }
+  
+.about-content {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 0; /* Прижимаем к нижней границе */
+  right: 0; /* Прижимаем к правой границе */
+  width: 693px; /* Ширина текстового блока */
+  padding: 0; /* Убираем внутренние отступы */
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.about-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px; 
+  color: #000000; 
+  margin: 0; /* Убираем стандартные отступы */
+  position: absolute; /* Абсолютное позиционирование */
+  top: -60px; /* Располагаем в левом верхнем углу */
+  left: 0; /* Располагаем в левом верхнем углу */
+}
+
+.about-text-first {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; 
+  color: #000000; 
+  margin-left: 0; /* Убираем отступ слева */
+  margin-top: 100px; /* Отступ от заголовка */
+  margin-bottom: 20px; /* Отступ между текстовыми блоками */
+  margin-right: 0; /* Убираем отступ справа */
+}
+
+.about-text-second {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; 
+  color: #000000; 
+  margin-left: 0; /* Убираем отступ слева */
+  margin-bottom: 0; /* Убираем отступ снизу */
+  margin-right: 0; /* Убираем отступ справа */
+}
+
+.footer-section {
+  margin-top: 180px; /* Отступ от блока about-section */
+  margin-bottom: 88px;
+  padding: 0 26px; /* Отступы слева и справа */
+  background-color: #FFFFFF; 
+}
+
+.footer-container {
+  display: flex; /* Используем flexbox для распределения элементов */
+  align-items: center; /* Выравниваем элементы по центру вертикально */
+  max-width: 1000px; 
+  height: 98px; 
+  margin: 0 auto; /* Центрируем контейнер */
+}
+
+.footer-contact {
+  flex-basis: 240px; /* Ширина блока контактов */
+  height: 98px; 
+  display: flex;
+  flex-direction: column; /* Размещаем строки вертикально */
+  justify-content: center; /* Центрируем содержимое по вертикали */
+}
+
+.footer-contact p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px; 
+  color: #000000; 
+  margin: 0; /* Убираем стандартные отступы */
+  white-space: nowrap; /* Запрещаем перенос текста */
+  position: relative; /* Для создания псевдоэлемента */
+}
+
+.footer-menu {
+  flex-basis: 149px; /* Ширина блока меню */
+  height: 64px; 
+  text-align: center;
+  margin-left: 186px; /* Отступ после блока контактов */
+  display: flex; /* Используем flexbox */
+  flex-direction: column; /* Размещаем пункты вертикально */
+  align-items: flex-start; /* Выравниваем пункты по левому краю */
+  justify-content: flex-start; /* Прижимаем пункты к верхней границе */
+}
+
+.menu-list {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем стандартные отступы */
+  margin: 0; /* Убираем стандартные отступы */
+}
+
+.menu-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #000000; 
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+.footer-social {
+  flex-basis: 240px; /* Ширина блока соцсетей */
+  height: 48px; 
+  margin-left: 186px; /* Отступ после блока меню */
+  display: flex; /* Используем flexbox для размещения логотипов */
+  align-items: center; /* Выравниваем содержимое по центру вертикально */
+}
+
+.social-logo {
+  width: 48px; 
+  height: 48px; 
+  margin-right: 48px; /* Отступ между логотипами */
+}
+
+.social-logo:last-child {
+  margin-right: 0; /*  отступ у последнего логотипа */
+}
+
+.contact-underlined {
+  text-decoration: underline; /*  подчеркивание */
+}
